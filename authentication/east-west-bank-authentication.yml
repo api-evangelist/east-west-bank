@@ -1,0 +1,43 @@
+generated: '2026-07-23'
+method: searched
+source: https://apiportal.eastwestbank.com/faqs
+docs: https://apiportal.eastwestbank.com/how-it-works
+note: >-
+  No OpenAPI/Swagger is publicly downloadable for the Bridge Open Banking program
+  (reference and specs are gated behind portal sign-in and sales onboarding), so this
+  profile is captured from the developer portal's public How It Works and FAQ pages
+  rather than derived from a securityScheme. It reflects what the provider documents.
+summary:
+  types:
+  - oauth2
+  oauth2_flows:
+  - clientCredentials
+  api_key_in: []
+schemes:
+- name: OAuth2
+  type: oauth2
+  scheme: standard OAuth 2.0
+  sources:
+  - https://apiportal.eastwestbank.com/faqs
+  flows:
+  - flow: clientCredentials
+    note: >-
+      Developers create an "application" (a collection of one or more API resources
+      accessible with a single authentication credential) to obtain a client id and
+      secret. The portal FAQ documents base-64 encoding the client and secret, then
+      exchanging them for an access token that is presented on API calls.
+  credentials:
+    client_id: issued per application on application creation
+    client_secret: issued per application on application creation
+    encoding: >-
+      base-64 encode the client id and secret in-application (the FAQ recommends
+      encoding in application logic rather than storing a static encoded string)
+    access_token: >-
+      short-lived bearer access token obtained from the credentials; requests fail
+      with HTTP 401 when the client id/secret do not match the created application or
+      when the access token is invalidated or expired
+troubleshooting:
+- status: 401
+  causes:
+  - client-id and secret not correctly matched against the created application
+  - access token invalidated or expired

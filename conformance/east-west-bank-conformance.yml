@@ -1,0 +1,21 @@
+generated: '2026-07-23'
+method: searched
+source: https://apiportal.eastwestbank.com/faqs
+note: >-
+  Conformance assertions for the Bridge Open Banking program. No OpenAPI is publicly
+  downloadable, so cross-cutting standards cannot be derived from a spec; the one
+  assertion below is sourced from the developer portal FAQ, which states the program
+  uses a standard OAuth 2.0 authorization scheme. Absence of an entry means no public
+  evidence, not non-conformance.
+standards:
+- id: oauth2
+  conforms: true
+  evidence: >-
+    Portal FAQ states "We use a standard OAuth 2.0 scheme for authorization"
+    (client id + secret exchanged for an access token).
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: no public spec or error reference to confirm application/problem+json
+- id: fdx
+  conforms: false
+  evidence: no public Financial Data Exchange participation documented

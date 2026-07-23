@@ -53,6 +53,8 @@ apis:
   - type: Documentation
     url: https://apiportal.eastwestbank.com/products
 common:
+- type: DomainSecurity
+  url: security/east-west-bank-domain-security.yml
 - type: Website
   url: https://www.eastwestbank.com/
 - type: DeveloperPortal
@@ -67,6 +69,24 @@ common:
   url: https://github.com/eastwestbank
 - type: LinkedIn
   url: https://www.linkedin.com/company/east-west-bank
+- type: Authentication
+  url: authentication/east-west-bank-authentication.yml
+- type: Sandbox
+  url: sandbox/east-west-bank-sandbox.yml
+- type: Conformance
+  url: conformance/east-west-bank-conformance.yml
+- type: LLMsTxt
+  url: llms/east-west-bank-llms.txt
+- type: GettingStarted
+  url: https://apiportal.eastwestbank.com/how-it-works
+- type: SignUp
+  url: https://apiportal.eastwestbank.com/signup
+- type: Login
+  url: https://apiportal.eastwestbank.com/signin
+- type: TermsOfService
+  url: https://apiportal.eastwestbank.com/terms-and-conditions
+- type: HelpCenter
+  url: https://apiportal.eastwestbank.com/faqs
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

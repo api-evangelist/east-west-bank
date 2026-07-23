@@ -1,0 +1,28 @@
+generated: '2026-07-23'
+method: searched
+source: https://apiportal.eastwestbank.com/faqs
+docs: https://apiportal.eastwestbank.com/how-it-works
+note: >-
+  East West Bank's Bridge Open Banking portal publishes a sandbox for commercial /
+  Global Transaction Services (GTS) developers. Concrete test values (account numbers,
+  credentials) are provisioned per application after sign-in and are not published on
+  the anonymous portal, so none are reproduced here (no fabrication) — this captures the
+  sandbox model and capabilities the FAQ documents verbatim.
+sandbox:
+  available: true
+  test_vs_live: >-
+    Separate sandbox and production environments; developers sign up for access to
+    both sandbox and production per the portal onboarding flow.
+  test_data: >-
+    The provider supplies test data, including live test accounts, in the sandbox
+    environment. Test accounts and test payments are provisioned to the developer's
+    application rather than published publicly.
+  in_browser_testing: >-
+    The documentation pages allow in-browser ("try it") testing on the Bridge Open
+    Banking portal; the FAQ states portal access does not require client certificates.
+  capabilities:
+  - open and manage test accounts
+  - obtain information on accounts and transactions
+  - transfer funds
+  - retrieve statements
+  test_values: none published anonymously (provisioned per application after sign-in)

@@ -1,0 +1,39 @@
+# East West Bank
+
+> East West Bank is the California state-chartered commercial banking subsidiary of East West Bancorp, Inc. (NASDAQ: EWBC), headquartered in Pasadena, California, with roughly $79.7 billion in total assets and more than 125 locations across the United States and Greater China. A Member FDIC institution and one of the few U.S. banks holding a full banking license in China, it specializes in cross-border U.S.-China commercial banking, treasury, and Global Transaction Services (GTS). Its first-party developer program, "Bridge Open Banking," exposes commercial banking APIs to manage sub-accounts, retrieve balances, transfer funds, and obtain commercial account information. Access is gated behind sign-in and sales onboarding, so no OpenAPI/Swagger is publicly downloadable.
+
+## APIs
+
+- [East West Bank Bridge Open Banking API](https://apiportal.eastwestbank.com/how-it-works): First-party commercial banking API program for GTS clients — manage sub-accounts, retrieve balances, transfer funds, and obtain commercial account information. OAuth 2.0 authorization; sandbox with live test accounts. Specs gated behind sign-in.
+
+## Docs
+
+- [Developer Portal (Bridge Open Banking)](https://apiportal.eastwestbank.com/): Home of the developer program.
+- [How It Works](https://apiportal.eastwestbank.com/how-it-works): Getting-started flow — create an application, obtain a single authentication credential, and test against the sandbox.
+- [API Reference](https://apiportal.eastwestbank.com/apis): API listing (early-stage; "more APIs coming soon").
+- [Products](https://apiportal.eastwestbank.com/products): Product library.
+- [FAQs](https://apiportal.eastwestbank.com/faqs): Authentication (OAuth 2.0), sandbox, and troubleshooting guidance.
+- [Support](https://apiportal.eastwestbank.com/support): Developer support.
+
+## Auth
+
+- OAuth 2.0. Create an application to obtain a client id and secret; base-64 encode them and exchange for a short-lived access token presented on API calls. HTTP 401 on mismatched credentials or an expired/invalidated token.
+
+## Sandbox
+
+- Sandbox with provider-supplied live test accounts. Open and manage test accounts, obtain account/transaction information, transfer funds, and retrieve statements. In-browser "try it" testing on the portal (no client certificate required for portal access).
+
+## Onboarding
+
+- [Sign Up](https://apiportal.eastwestbank.com/signup)
+- [Sign In](https://apiportal.eastwestbank.com/signin)
+
+## Legal
+
+- [Terms & Conditions](https://apiportal.eastwestbank.com/terms-and-conditions)
+- [Privacy Policy](https://apiportal.eastwestbank.com/privacy-policy)
+
+## Company
+
+- [East West Bank](https://www.eastwestbank.com/): Corporate site.
+- [Our Story](https://www.eastwestbank.com/en/company/our-story): About East West Bank.
