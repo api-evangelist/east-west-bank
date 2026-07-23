@@ -1,0 +1,107 @@
+aid: east-west-bank
+name: East West Bank
+review:
+  question: Does East West Bank expose a public first-party developer API, and what is its
+    open-finance posture (developer portal, downloadable specs, FDX/1033 participation,
+    aggregator access, auth model)?
+  answer: true
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    East West Bank (California state-chartered commercial bank; subsidiary of East West
+    Bancorp, NASDAQ: EWBC; Member FDIC; ~$79.7B assets; cross-border U.S.-China focus)
+    operates a live, first-party developer portal branded "Bridge Open Banking" at
+    https://apiportal.eastwestbank.com/ (HTTP 200). It targets commercial / Global
+    Transaction Services (GTS) clients and documents API capabilities to manage
+    sub-accounts, retrieve balances, transfer funds, and obtain commercial account
+    information, with a sandbox offering live test accounts and test payments. The program
+    is early-stage: the /apis and /products pages both display "more APIs/products coming
+    soon," and there are no publicly listed individual API products or endpoints. Reference
+    material and specifications sit behind portal sign-in (https://apiportal.eastwestbank.com/signin,
+    HTTP 200) and sales onboarding, so NO OpenAPI/Swagger definition is publicly
+    downloadable and none was harvested. The developer subdomains developer.eastwestbank.com
+    and developers.eastwestbank.com do not resolve; api.eastwestbank.com returns HTTP 403.
+    The authentication model is not publicly documented, though the portal states developers
+    create an application to obtain a single authentication credential (consistent with an
+    OAuth2 / API-key application model on an IBM API Connect-style gateway). No public FDX
+    (Financial Data Exchange) participation and no stated CFPB Section 1033 posture were
+    found. Consumer-permissioned data access is available indirectly through the Plaid
+    aggregator (per OpenBankingTracker). An official GitHub organization exists at
+    github.com/eastwestbank (HTTP 200) but has 0 public repositories.
+  posture:
+    firstPartyDeveloperPortal: true
+    developerPortalURL: https://apiportal.eastwestbank.com/
+    developerPortalStatus: 200
+    platformVendor: Bridge Open Banking (branded developer portal, IBM API Connect-style gateway)
+    downloadableOpenAPI: false
+    specProvenance: none — API reference and specifications are gated behind portal sign-in and sales onboarding
+    authModel: not publicly documented (application-credential model; likely OAuth2 / API key)
+    fdxParticipant: false
+    section1033Posture: none documented
+    aggregatorAccess:
+      - Plaid
+    charterType: California state-chartered commercial bank (Member FDIC)
+    ticker: EWBC
+    headquarters: Pasadena, California, United States
+  transports:
+    - protocol: REST
+      scheme: https
+      note: Commercial banking APIs delivered via the Bridge Open Banking portal; base URLs are not publicly documented.
+      documented: true
+  probes:
+    - url: https://apiportal.eastwestbank.com/
+      status: 200
+      note: Live "Bridge Open Banking" developer portal home.
+    - url: https://apiportal.eastwestbank.com/apis
+      status: 200
+      note: API listing page — "more APIs will be coming soon"; no products enumerated.
+    - url: https://apiportal.eastwestbank.com/products
+      status: 200
+      note: Products library — "more products will be coming soon."
+    - url: https://apiportal.eastwestbank.com/how-it-works
+      status: 200
+      note: Describes sub-accounts, balances, fund transfers, commercial account info, and sandbox with live test accounts.
+    - url: https://apiportal.eastwestbank.com/support
+      status: 200
+    - url: https://apiportal.eastwestbank.com/signin
+      status: 200
+    - url: https://apiportal.eastwestbank.com/privacy-policy
+      status: 200
+    - url: https://developer.eastwestbank.com
+      status: 0
+      note: Does not resolve.
+    - url: https://developers.eastwestbank.com
+      status: 0
+      note: Does not resolve.
+    - url: https://api.eastwestbank.com
+      status: 403
+      note: Host responds but access forbidden; not a documented API surface.
+    - url: https://www.eastwestbank.com/
+      status: 200
+    - url: https://github.com/eastwestbank
+      status: 200
+      note: Official GitHub org (bio "Velo GitHub Service"), 0 public repositories.
+sources:
+  - url: https://apiportal.eastwestbank.com/
+    type: DeveloperPortal
+    note: Live first-party "Bridge Open Banking" developer portal.
+  - url: https://apiportal.eastwestbank.com/how-it-works
+    type: Documentation
+    note: Documents sub-accounts, balances, fund transfers, commercial account info, and sandbox test accounts/payments.
+  - url: https://www.openbankingtracker.com/provider/eastwestbank
+    type: Reference
+    note: Notes East West Bank is supported by the Plaid aggregator; no publicly listed direct API products.
+  - url: https://www.eastwestbank.com/
+    type: Website
+    note: Corporate site; confirms Member FDIC state-chartered commercial bank, cross-border U.S.-China focus.
+actions:
+  apisYmlUpdated: true
+  openapiHarvested: false
+  reason: |
+    A real, live first-party developer portal was confirmed (HTTP 200) and one documented
+    API program (Bridge Open Banking commercial API) was recorded as a single apis[] entry
+    with its real human documentation URLs. No OpenAPI/Swagger is publicly downloadable
+    (gated behind sign-in and sales onboarding), so openapi/ remains empty and nothing was
+    harvested. No FDX participation or Section 1033 posture is documented; Plaid provides
+    indirect aggregator access.

@@ -1,0 +1,72 @@
+aid: east-west-bank
+url: https://raw.githubusercontent.com/api-evangelist/east-west-bank/refs/heads/main/apis.yml
+name: East West Bank
+kind: company
+description: >-
+  East West Bank is the California state-chartered commercial banking subsidiary
+  of East West Bancorp, Inc. (NASDAQ EWBC), headquartered in Pasadena, California, with
+  roughly $79.7 billion in total assets and more than 125 locations across the United States
+  and Greater China. A Member FDIC institution and one of the few U.S. banks holding a full
+  banking license in China, it specializes in cross-border U.S.-China commercial banking,
+  treasury and Global Transaction Services (GTS). On the open-finance front, East West Bank
+  runs a first-party developer portal ("Bridge Open Banking" at apiportal.eastwestbank.com)
+  aimed at commercial clients, documenting APIs to manage sub-accounts, retrieve balances,
+  transfer funds, and obtain commercial account information, with a sandbox of live test
+  accounts; the program is early-stage ("more APIs coming soon") and gated behind sales
+  onboarding, so no OpenAPI/Swagger is publicly downloadable. Consumer-permissioned data
+  access is also available indirectly through the Plaid aggregator. No public FDX participation
+  or CFPB Section 1033 posture is documented as of this profile.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial Services
+- Banking
+- United States
+- Commercial Banking
+- Treasury Management
+- Cross-Border
+- Open Finance
+- Data Aggregation
+created: '2026-07-23'
+modified: '2026-07-23'
+specificationVersion: '0.19'
+apis:
+- aid: east-west-bank:bridge-open-banking-api
+  name: East West Bank Bridge Open Banking API
+  description: East West Bank's first-party commercial banking API program, delivered through
+    the "Bridge Open Banking" developer portal for Global Transaction Services (GTS) clients.
+    Documented capabilities let applications manage sub-accounts, retrieve account balances,
+    transfer funds, and securely obtain information on commercial accounts. Developers create
+    an application to obtain a single authentication credential and test against a sandbox of
+    live test accounts and test payments. The program is early-stage and access is gated
+    behind sales onboarding, so specifications are not publicly downloadable.
+  humanURL: https://apiportal.eastwestbank.com/how-it-works
+  tags:
+  - Accounts
+  - Balances
+  - Payments
+  - Transfers
+  properties:
+  - type: Documentation
+    url: https://apiportal.eastwestbank.com/how-it-works
+  - type: APIReference
+    url: https://apiportal.eastwestbank.com/apis
+  - type: Documentation
+    url: https://apiportal.eastwestbank.com/products
+common:
+- type: Website
+  url: https://www.eastwestbank.com/
+- type: DeveloperPortal
+  url: https://apiportal.eastwestbank.com/
+- type: Documentation
+  url: https://apiportal.eastwestbank.com/how-it-works
+- type: Support
+  url: https://apiportal.eastwestbank.com/support
+- type: PrivacyPolicy
+  url: https://apiportal.eastwestbank.com/privacy-policy
+- type: GitHubOrganization
+  url: https://github.com/eastwestbank
+- type: LinkedIn
+  url: https://www.linkedin.com/company/east-west-bank
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
