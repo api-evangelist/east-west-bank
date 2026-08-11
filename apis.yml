@@ -79,7 +79,7 @@ common:
   url: llms/east-west-bank-llms.txt
 - type: GettingStarted
   url: https://apiportal.eastwestbank.com/how-it-works
-- type: SignUp
+- type: Signup
   url: https://apiportal.eastwestbank.com/signup
 - type: Login
   url: https://apiportal.eastwestbank.com/signin
