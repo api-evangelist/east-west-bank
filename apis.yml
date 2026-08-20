@@ -29,6 +29,15 @@ deliveryModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
+- Financial-Services
+- Banking
+- United States
+- Commercial Banking
+- Treasury Management
+- Cross-Border
+- Open Finance
+- Data Aggregation
+tags_raw:
 - Financial Services
 - Banking
 - United States
@@ -52,6 +61,11 @@ apis:
     behind sales onboarding, so specifications are not publicly downloadable.
   humanURL: https://apiportal.eastwestbank.com/how-it-works
   tags:
+  - Account
+  - Balances
+  - Payments
+  - Transfers
+  tags_raw:
   - Accounts
   - Balances
   - Payments
